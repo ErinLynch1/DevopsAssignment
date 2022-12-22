@@ -1,3 +1,15 @@
+const express = require('express');
+require("./seeder");
+const mongoose = require('mongoose');
+const app = express();
+
+app.use(express.json())
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "Failed to connect: "));
+db.once("open", function () {
+  console.log("Connection successful!");
+});
+
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
