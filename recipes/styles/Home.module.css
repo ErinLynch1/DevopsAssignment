@@ -1,7 +1,5 @@
 .container {
   padding: 0 0rem;
-  background-image: linear-gradient(to right, rgb(194, 193, 193) , rgb(237, 237, 240));
-  height: 100vh;
 }
 
 .main {
@@ -114,6 +112,10 @@
   background-color: #474748;
   height: 80px;
   box-shadow: 2px 2px 2px 1px;
+}
+
+.loginwrapper {
+  border: 2px solid red;
 }
 
 .navbar, .ul {
