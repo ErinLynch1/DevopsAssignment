@@ -1,0 +1,70 @@
+.regcontainer {
+    display: flex;
+    flex: 1;
+}
+
+.regform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 10px;
+    height: 300px;
+    margin: 150px 80px;
+    border-radius: 10px;
+}
+
+.flexform {
+    display: flex;
+    gap: 30px;
+}
+
+.regflex {
+    display: flex;
+    flex: 1;
+}
+
+.regpic {
+    display: flex;
+    flex: 1;
+}
+
+.regwrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 150px 50px;
+    width: 80%;
+    gap: 5px;
+    height: 50%;
+}
+
+
+.regprofile {
+    display: flex;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-shadow: 1px 0px 0px 0px;
+    width: 50%;
+    margin: auto;
+    height: 80%;
+}
+
+.split {
+    background-color: re;
+}
+.inputs {
+    padding: 15px;
+    border-radius: 18px;
+    background-color: rgb(186, 184, 184);
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.updatebtn {
+    margin: auto;
+    padding: 10px;
+    border-radius: 8px;
+    width: 50%;
+}

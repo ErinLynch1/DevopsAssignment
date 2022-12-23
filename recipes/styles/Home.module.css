@@ -114,10 +114,6 @@
   box-shadow: 2px 2px 2px 1px;
 }
 
-.loginwrapper {
-  border: 2px solid red;
-}
-
 .navbar, .ul {
   display: flex;
   width: 100%;
