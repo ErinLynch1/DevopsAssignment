@@ -16,7 +16,7 @@
 
 .flexform {
     display: flex;
-    gap: 30px;
+    gap: 10px;
 }
 
 .regflex {
@@ -50,21 +50,65 @@
     height: 80%;
 }
 
-.split {
-    background-color: re;
-}
+
 .inputs {
     padding: 15px;
     border-radius: 18px;
-    background-color: rgb(186, 184, 184);
+    background-color: rgb(230, 226, 226);
     color: black;
     font-weight: bold;
     text-align: center;
 }
 
+.inputs:hover {
+    border: 2px solid rgb(61, 146, 198);
+}
+
 .updatebtn {
     margin: auto;
-    padding: 10px;
+    padding: 14px;
     border-radius: 8px;
     width: 50%;
+    background-color: rgb(61, 146, 198);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
+
+@media screen and (max-width: 920px),
+    screen and (max-height: 500px) {
+        .regcontainer {
+            flex-direction: column;
+        }
+
+        .regwrapper {
+        }
+
+        .regwrapper {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            margin: 0px;
+            margin-top: 20px;
+            padding: 20px;
+            gap: 10px;
+        }
+
+        .regprofile {
+            display: flex;
+            border: 2px solid black;
+            border-radius: 4px;
+            box-shadow: 1px 0px 0px 0px;
+            width: 50%;
+            margin: auto;
+            height: 200px;
+        }
+
+        .regform {
+            margin: 0;
+        }
+
+        .flexform {
+            flex-direction: column;
+        }
+    }   

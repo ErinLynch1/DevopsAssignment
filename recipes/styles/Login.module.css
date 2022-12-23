@@ -5,7 +5,7 @@
 
   .login {
     display: flex;
-    border: 1px solid #474748;;
+    border-right: 1px solid #474748;
     justify-content: center;
     flex: 1;
   }
@@ -33,13 +33,13 @@
 
   .inputs {
     border-radius: 16px;
-    padding: 25px;
+    padding: 10px;
     width: 100%;
     text-align: center;
   }
 
   .inputs:hover {
-    border: 2px solid blue;
+    border: 2px solid rgb(61, 146, 198);
   }
 
  
@@ -49,16 +49,30 @@
     border: 1px solid black;
     width: 100px;
     border-radius: 12px;
+    font-weight: bold;
     padding: 12px;
+    color: white;
+    background-color: rgb(61, 146, 198);
     cursor: pointer;
+  }
+
+  .loginbtn:hover {
+    background-color: rgb(67, 140, 182);
   }
 
   .registerbtn {
     border: 1px solid black;
     width: 100px;
+    color: white;
+    font-weight: bold;
     border-radius: 12px;
     padding: 12px;
+    background-color: rgb(61, 146, 198);
     cursor: pointer;
+  }
+
+  .registerbtn:hover {
+    background-color: rgb(67, 140, 182);
   }
 
   .registerh2 {
@@ -75,12 +89,16 @@
     width: auto;
   }
   
-  @media screen and (max-width: 800px),
+  @media screen and (max-width: 920px),
     screen and (max-height: 500px) {
 
     .loginwrapper {
         display: flex;
         flex-direction: column;
+    }
+
+    .login {
+        border-bottom: 1px solid #474748;
     }
 
     .inputs {
