@@ -1,3 +1,4 @@
+const bodyParser = require('body-parser');
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts')
 const app = express();
@@ -8,6 +9,10 @@ app.use(express.static('public'));
 app.use(expressLayouts);
 app.set('layout', './layouts/main');
 app.set('view engine', 'ejs');
+
+app.get("/register", (req, res) => {
+res.render("register")
+});
 
 const routes = require('./server/routes/recipeRoutes.js')
 app.use('/', routes)
