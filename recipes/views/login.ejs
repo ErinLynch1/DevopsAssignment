@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/views/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
 <body>
@@ -24,5 +24,28 @@
             </div>
         </ul>
     </nav>
+    <div class="logincontainer">
+        <Navbar />
+        <div class="loginwrapper">
+        <div class="login">
+          <form class="loginform">
+          <h2 class="loginh2">Log in</h2>
+              <input class="inputs" type='text' name='username' placeholder='Username'></input>
+              <input class="inputs" type='password' name='password' placeholder='Password'></input>
+              <input class="loginbtn" type='submit' value='Login'></input>
+              </form>
+          </div>
+        <div class="notuser">
+        <div class="registernow">
+        <h2 class="registerh2">Not yet a user? Register now</h2>
+        <a href='/createaccount'><input class="registerbtn" type='submit' value='Register'></input></a>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  
+    )
+  }
 </body>
 </html>

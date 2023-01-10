@@ -6,13 +6,11 @@ const port = process.env.port || 3000;
 require('dotenv').config();
 app.use(express.urlencoded( { extended: true } ));
 app.use(express.static('public'));
-app.use(expressLayouts);
-app.set('layout', './layouts/main');
 app.set('view engine', 'ejs');
 
-app.get("/register", (req, res) => {
-res.render("register")
-});
+app.get("/", (req, res) => {res.render("index.ejs")});
+app.get("/register", (req, res) => {res.render("register.ejs")});
+app.get("/login", (req, res) => {res.render("login.ejs")});
 
 const routes = require('./server/routes/recipeRoutes.js')
 app.use('/', routes)
