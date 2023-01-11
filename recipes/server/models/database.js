@@ -1,8 +1,16 @@
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.set('strictQuery', false);
 
-const db = mongoose.connection;
-db.on('Error', console.error.bind(console, 'Connection Failed'));
-db.once('Success', function(){
-    console.log('Connected')
+mongoose.connect("mongodb+srv://admin:admin@recipesdev.xjq6sp2.mongodb.net/RecipesDev?retryWrites=true&w=majority", {
+    useNewUrlParser:true,
+    useUnifiedTopology:true
 });
+
+const db = mongoose.connection
+db.on('error', (err) =>{
+    console.log(err)
+})
+
+db.once('open', () => {
+    console.log('Database connection successful!')
+})
