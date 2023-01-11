@@ -9,6 +9,16 @@
     <title><%= typeof title != 'undefined' ? title: 'Recipes' %></title>
 </head>
 <body>
+
+  <script>
+    window.onload = function() {
+        let message = new URLSearchParams(window.location.search).get('message');
+        if(message){
+          alert(message);
+        }
+    };
+    </script>   
+    
     <%- include('common/header'); -%>
     <div class="container">
           <h2 class="homeh2">Featured Recipes</h2>

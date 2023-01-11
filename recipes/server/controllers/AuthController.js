@@ -17,9 +17,7 @@ const register = (req, res, next) => {
     })
     user.save()
     .then(user => {
-        res.json({
-            message: 'User Added'
-        })
+        res.redirect('/?message=Successfully registered');
     })
     .catch(error => {
         res.json({
