@@ -9,26 +9,30 @@
     <title><%= typeof title != 'undefined' ? title: 'Recipes' %></title>
 </head>
 <body>
+
+  <script>
+    window.onload = function() {
+        let message = new URLSearchParams(window.location.search).get('message');
+        if(message){
+          alert(message);
+        }
+    };
+    </script>   
+    
     <%- include('common/header'); -%>
     <div class="container">
           <h2 class="homeh2">Featured Recipes</h2>
           <section class="recipeflex">
           <div class="recipewrapper">
-          <div class="recipe1"></div><p class="recipepara">Lorem 
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p></div>
+          <div class="recipe1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Bacalhau_com_natas.jpg" alt="Bacalhau_com_natas">
+
+          </div><p class="recipepara">Bacalhau com natas (translated literally as "cod with double cream") is a popular way of cooking salted cod (bacalhau) in Portugal.
+            This dish consists of baked cod in the oven layered with onions, diced fried potatoes (or leftover cooked potatoes) and double cream, usually seasoned with nutmeg and white pepper. </p></div>
           <div class="recipewrapper">
-          <div class="recipe2"></div><p class="recipepara">Lorem 
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+          <div class="recipe2"></div><p class="recipepara">Add a Recipe you like:)</p></div>
           <div class="recipewrapper">
-          <div class="recipe3"></div><p class="recipepara">Lorem 
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-          consequat.</p></div>
+          <div class="recipe3"></div><p class="recipepara">Add a Recipe you like:)</p></div>
           </section>
           <%- include('common/footer'); -%>
       </div>
