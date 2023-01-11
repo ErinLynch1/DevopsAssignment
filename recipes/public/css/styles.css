@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
 }
 
 a {
@@ -119,7 +120,7 @@ a {
 
   .loginwrapper {
     display: flex;
-    height: 91vh;
+    height: 90vh;
   }
 
   .login {
@@ -191,7 +192,7 @@ a {
     margin-top: 10px;
   }
 
-  .registerbtn:hover {
+  .registerbtn:hover, .regbtn:hover {
     background-color: #63a6ed;
   }
 
@@ -211,14 +212,21 @@ a {
 
   // Registration
 
+  .container {
+    display: flex;
+  }
+
   .regcontainer {
     display: flex;
-    flex: 1;
+    flex-direction: row;
+    height: 90vh;
+    width: 100vw;
 }
 
 .regform {
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     flex: 1;
     gap: 10px;
@@ -229,12 +237,15 @@ a {
 
 .flexform {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .regflex {
     display: flex;
+    align-items: center;
     flex: 1;
+    border-right: 1px solid #474748;
 }
 
 .regpic {
@@ -263,9 +274,6 @@ a {
     height: 80%;
 }
 
-.split {
-    background-color: re;
-}
 .inputs {
     padding: 15px;
     border-radius: 18px;
@@ -278,8 +286,28 @@ a {
 .updatebtn {
     margin: auto;
     padding: 10px;
+    background-color: rgb(61, 146, 198);
     border-radius: 8px;
     width: 50%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.updatebtn:hover {
+  background-color: #63a6ed;
+}
+
+.regbtn {
+  border: 1px solid black;
+  width: 100px;
+  border-radius: 12px;
+  justify-content: center;
+  font-weight: bold;
+  padding: 12px;
+  color: white;
+  background-color: rgb(61, 146, 198);
+  cursor: pointer;
 }
 
   @media screen and (max-width: 920px),
@@ -292,6 +320,7 @@ a {
 
     .login {
       border-bottom: 1px solid #474748;
+      border-right: 0;
   }
 
     .inputs {
@@ -372,9 +401,35 @@ a {
   
   @media (max-width: 1200px) {
 
-    .container {
-       
+    .regcontainer {
+       flex-direction: column;
+       height: auto;
     }
+
+    
+  .loginwrapper {
+    display: flex;
+    height: 85vh;
+  }
+
+    .regform {
+      margin: 0;
+    }
+
+    .regflex {
+      margin-top: 20px;
+    }
+
+
+    .regwrapper {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      margin: 50px 20px;
+      width: 80%;
+      gap: 5px;
+      height: 100%;
+  }
 
     .recipeflex {
       width: 100%;
@@ -392,7 +447,8 @@ a {
     .homeh2 {
       text-align: center;
       font-size: 32px;
-      margin-top: 60px;
+      margin: auto;
+      margin-top: 20px;
       margin-bottom: 20px;
     }
     .recipe1, .recipe2, .recipe3 {
