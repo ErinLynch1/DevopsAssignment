@@ -10,7 +10,7 @@
 </head>
 <body>
     <%- include('common/header'); -%>
-    <form id="register-form">
+    <form onsubmit="submitForm(event)" action="/register" method="POST">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <label for="username">Username:</label>

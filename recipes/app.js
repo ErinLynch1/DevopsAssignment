@@ -8,12 +8,15 @@ require('dotenv').config();
 app.use(express.urlencoded( { extended: true } ));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
+const router = express.Router();
+const user_controller = require("./server/controllers/userController");
 
-
-
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use('/', router);
 app.get("/", (req, res) => {res.render("index.ejs")});
 app.get("/register", (req, res) => {res.render("register.ejs")});
 app.get("/login", (req, res) => {res.render("login.ejs")});
+router.post("/register/create", user_controller.register);
 
 const routes = require('./server/routes/recipeRoutes.js')
 app.use('/', routes)
