@@ -9,45 +9,32 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
     <%- include('common/header'); -%>
-    <form onsubmit="submitForm(event)" action="/api/register" method="POST">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">Register</button>
-      </form>
+
+    
+    <div class="regcontainer">
+        <div class="regflex">
+    
+            <form onsubmit="submitForm(event)" class="regform" action="/api/register" method="POST">
+        <h2 classe="regh2">Register</h2>
+        <div class="flexform">
+        <input class="inputs" type='text' name='username' id='username' placeholder='Username'></input>
+        <input class="inputs" type='email' name='email' id='email' placeholder='Email'></input>
+        <input class="inputs" type='password' name='password' id='password' placeholder='Password'></input>
+
+        </div>
+        <button type="submit" class="regbtn">Register</button>
+        
+        </form>
+        </div>
+        <div class="regpic">
+        <div class="regwrapper">
+        <div class="regprofile">
+          </div>
+          <button class="updatebtn">Upload Profile Picture</button>
+        </div>
+        </div>
+        </div></div>
 </body>
 </html>
-
-<div class="container">
-  </div>
-    <div class="regcontainer">
-    <div class="regflex">
-
-    <form class="regform">
-    <h2 classe="regh2">Register</h2>
-    <div class="flexform">
-    <input class="inputs" type='text' name='username' id='username' placeholder='Username'></input>
-    <input class="inputs" type='email' name='email' id='email' placeholder='Email'></input>
-    </div>
-    <div class="flexform">
-    <input class="inputs" type='password' name='password' id='password' placeholder='Password'></input>
-    <input class="inputs" type='password' name='password' placeholder='Confirm Password'></input>
-    </div>
-    <button type="submit">Register</button>
-    
-    </form>
-    </div>
-    <div class="regpic">
-    <div class="regwrapper">
-    <div class="regprofile">
-      </div>
-      <button class="updatebtn">Upload Profile Picture</button>
-    </div>
-    </div>
-    </div></div>
-)
-}
