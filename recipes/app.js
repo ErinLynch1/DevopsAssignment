@@ -14,8 +14,9 @@ const AuthRoute = require('./server/routes/auth')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', router);
-app.get("/", (req, res) => {res.render("index.ejs")});
+app.get("/home", (req, res) => {res.render("index.ejs")});
 app.get("/register", (req, res) => {res.render("register.ejs")});
+app.get("/reviews", (req, res) => {res.render("reviews.ejs")});
 app.get("/login", (req, res) => {res.render("login.ejs")});
 router.post("/register/create", user_controller.register);
 app.use('/api', AuthRoute)
