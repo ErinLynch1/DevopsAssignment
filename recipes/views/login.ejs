@@ -4,34 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cabin&family=Cuprum&family=DynaPuff&family=Fraunces:opsz,wght@9..144,700&family=Indie+Flower&family=Lato:wght@300&family=Merriweather+Sans&family=Mochiy+Pop+One&family=Montserrat:wght@500;700&family=PT+Serif&family=Quicksand&family=Roboto:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="ul">
-        <div class="navleft">
-            <li><a href="#">Recipes</a></li>
-            <li><a href="#">Chefs</a></li>
-            <li><a href="#">Reviews</a></li>
-            <li><a href="#">Suprise Me</a></li>
-            </div>
-
-            <div class="navright">
-            <li><a href="#">Login</a></li>
-                /
-            <li><a href="#">Register</Link></li>
-            </div>
-        </ul>
-    </nav>
+  <%- include('common/header'); -%>
     <div class="logincontainer">
         <Navbar />
         <div class="loginwrapper">
         <div class="login">
           <form class="loginform">
           <h2 class="loginh2">Log in</h2>
-              <input class="inputs" type='text' name='username' placeholder='Username'></input>
-              <input class="inputs" type='password' name='password' placeholder='Password'></input>
+              <a><input class="inputs" type='text' name='username' placeholder='Username'></a></input>
+              <a><input class="inputs" type='password' name='password' placeholder='Password'></a></input>
               <input class="loginbtn" type='submit' value='Login'></input>
               </form>
           </div>
@@ -44,8 +30,5 @@
       </div>
   </div>
   </div>
-  
-    )
-  }
 </body>
 </html>
