@@ -47,15 +47,11 @@ const login = (req, res, next) => {
                         message: 'Login Successful',
                         token
                     })
-                }else{
-                    res.json({
-                        message: 'Password doesnt match'
-                    })
                 }
             })
         } else {
             res.json({
-                message: 'No User'
+                message: 'Incorrect details'
             })
         }
     })
