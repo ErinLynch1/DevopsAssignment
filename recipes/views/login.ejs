@@ -14,9 +14,9 @@
         <Navbar />
         <div class="loginwrapper">
         <div class="login">
-          <form class="loginform">
+          <form onsubmit="submitForm(event)" class="loginform" action="/api/login" method="POST">
           <h2 class="loginh2">Log in</h2>
-              <a><input class="inputs" type='text' name='username' placeholder='Username'></a></input>
+              <a><input class="inputs" type='text' name='username' placeholder='Username / Email'></a></input>
               <a><input class="inputs" type='password' name='password' placeholder='Password'></a></input>
               <input class="loginbtn" type='submit' value='Login'></input>
               </form>
@@ -24,7 +24,7 @@
         <div class="notuser">
         <div class="registernow">
         <h2 class="registerh2">Not yet a user? Register now</h2>
-        <a href='/createaccount'><input class="registerbtn" type='submit' value='Register'></input></a>
+        <a href='/register'><input class="registerbtn" type='submit' value='Register'></input></a>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 require('../models/database')
-const User = require('../models/Users')
+const User = require('../models/User')
 exports.homepage = async(req, res) => {
     res.render('index', { title: 'Recipes'});
 }

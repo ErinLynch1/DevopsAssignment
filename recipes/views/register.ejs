@@ -10,7 +10,7 @@
 </head>
 <body>
     <%- include('common/header'); -%>
-    <form onsubmit="submitForm(event)" action="/register" method="POST">
+    <form onsubmit="submitForm(event)" action="/api/register" method="POST">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <label for="username">Username:</label>
@@ -21,3 +21,32 @@
       </form>
 </body>
 </html>
+
+<div class="container">
+    <Navbar />
+  </div>
+    <div class="regcontainer">
+    <div class="regflex">
+
+    <form class="regform">
+    <h2 classe="regh2">Register</h2>
+    <div class="flexform">
+    <input class="inputs" type='text' name='username' id='username' placeholder='Username'></input>
+    <input class="inputs" type='email' name='email' id='email' placeholder='Email'></input>
+    </div>
+    <div class="flexform">
+    <input class="inputs" type='password' name='password' id='password' placeholder='Password'></input>
+    <input class="inputs" type='password' name='confpword' placeholder='Confirm Password'></input>
+    </div>
+    </form>
+    </div>
+    <div class="regpic">
+    <div class="regwrapper">
+    <div class="regprofile">
+      </div>
+      <button class="updatebtn">Upload Profile Picture</button>
+    </div>
+    </div>
+    </div></div>
+)
+}
