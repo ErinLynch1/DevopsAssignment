@@ -39,6 +39,8 @@ app.get('/logout', (req, res) => {res.clearCookie('token');
 res.redirect('/login');
 });
 
+
+
 router.post("/register/create", user_controller.register);
 app.use('/api', AuthRoute)
 
