@@ -6,6 +6,7 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 
+const { AuthUser } = require('./server/controllers/AuthController')
 
 const { default: mongoose } = require('mongoose');
 const app = express();
@@ -28,6 +29,7 @@ app.use(session({
 app.use(flash());
 app.use(fileUpload());
 
+
 app.use('/', router);
 app.get("/home", (req, res) => {res.render("index.ejs")});
 app.get("/register", (req, res) => {res.render("register.ejs")});
@@ -36,6 +38,7 @@ app.get("/login", (req, res) => {res.render("login.ejs")});
 app.get('/logout', (req, res) => {res.clearCookie('token');
 res.redirect('/login');
 });
+
 router.post("/register/create", user_controller.register);
 app.use('/api', AuthRoute)
 

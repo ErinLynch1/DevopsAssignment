@@ -235,6 +235,10 @@ a {
     color: green;
   }
 
+  a:hover {
+    color: #9ab6cc;
+  }
+
   .submitwrapper {
     display: flex;
     margin-top: 80px;
@@ -252,7 +256,15 @@ a {
     box-shadow: 2px 2px 10px 2px;
     align-items: center;
     background-image: linear-gradient(to bottom, rgb(121, 119, 119) , rgb(247, 248, 249));
+    animation: opacityForm 3s forwards;
   }
+
+@keyframes opacityForm {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
 
   label {
     display: block;
@@ -295,7 +307,7 @@ a {
   .explore {
     display: flex;
     margin-top: 60px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     justify-content: center;
     font-family: 'Julius Sans One', sans-serif;
   }
