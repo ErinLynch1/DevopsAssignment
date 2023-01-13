@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cabin&family=Cuprum&family=DynaPuff&family=Fraunces:opsz,wght@9..144,700&family=Indie+Flower&family=Lato:wght@300&family=Merriweather+Sans&family=Mochiy+Pop+One&family=Montserrat:wght@500;700&family=PT+Serif&family=Quicksand&family=Roboto:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cabin&family=Cuprum&family=DynaPuff&family=Fraunces:opsz,wght@9..144,700&family=Indie+Flower&family=Julius+Sans+One&family=Kaushan+Script&family=Lato:wght@300&family=Merriweather+Sans&family=Mochiy+Pop+One&family=Montserrat:wght@500;700&family=PT+Serif&family=Quicksand&family=Roboto:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <title><%= typeof title != 'undefined' ? title: 'Recipes' %></title>
 </head>
 <body>
+  <script>
+    window.onload = function() {
+
+        let message = new URLSearchParams(window.location.search).get('message');
+        if(message){
+          alert(message);
+        }
+    };
+    </script> 
 
   <script>
     window.onload = function() {
@@ -18,23 +27,69 @@
         }
     };
     </script>   
-    
+  
     <%- include('common/header'); -%>
     <div class="container">
-          <h2 class="homeh2">Featured Recipes</h2>
+      <h2 class="h3cuisine">Cuisines</h2>
           <section class="recipeflex">
-          <div class="recipewrapper">
-          <div class="recipe1">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Bacalhau_com_natas.jpg" alt="Bacalhau_com_natas">
-
-          </div><p class="recipepara">Bacalhau com natas (translated literally as "cod with double cream") is a popular way of cooking salted cod (bacalhau) in Portugal.
-            This dish consists of baked cod in the oven layered with onions, diced fried potatoes (or leftover cooked potatoes) and double cream, usually seasoned with nutmeg and white pepper. </p></div>
-          <div class="recipewrapper">
-          <div class="recipe2"></div><p class="recipepara">Add a Recipe you like:)</p></div>
-          <div class="recipewrapper">
-          <div class="recipe3"></div><p class="recipepara">Add a Recipe you like:)</p></div>
+            <div class="recipewrapper">
+            <% if(categories != '') { %>
+              <% categories.forEach(function(category, index){ %>
+          <a href="/categories/<%- category.name %>" class="cuisine">
+            <img src="img/<%- category.image %>" alt="<%- category.name %>">
+            <p class="recipepara"><%- category.name %></p>
+          </a>
+          <% }) %>
+          <% } %>
+        </div>
           </section>
-          <%- include('common/footer'); -%>
+          <div class="more">
+            <a href="categories" class="cuisine">
+              <button class="btn1">View More</button>
+            </a>
+          </div>
+          <hr class="split">
+          <h2 class="h3recipes">Recipes</h2>
+          <section class="recipeflex">
+            <div class="recipewrapper">
+
+            <% if(food != '') { %>
+              <% food.latest.forEach(function(recipe, index){ %>
+          <a href="/recipe/<%= recipe._id %>" class="cuisine">
+            <img src="uploads/<%= recipe.image %>" alt="<%= recipe.name %>">
+            <p class="recipepara"><%= recipe.name %></p>
+          </a>
+          <% }) %>
+          <% } else { %>
+            <p>No Recipes</p>
+            <% } %>
+        </div>
+          </section>
+          <div class="more">
+            <a href="categories" class="cuisine">
+              <button class="btn1">View More</button>
+            </a>
+          </div>
       </div>
+    
+      <script>
+        document.addEventListener("DOMContentLoaded", function(){
+           function getCookie(name) {
+              var value = "; " + document.cookie;
+              var parts = value.split("; " + name + "=");
+              if (parts.length == 2) return parts.pop().split(";").shift();
+           }
+           const navbar = document.getElementsByClassName("navright")[0];
+           const menu = document.getElementsByClassName("menu")[0];
+           const token = getCookie('token');
+           if (token) {
+               navbar.style.display = "none";
+               menu.style.display = "block";
+           } else {
+               navbar.style.display = "inline-block";
+               menu.style.display = "none";
+           }
+        });
+        </script>
 </body>
 </html>

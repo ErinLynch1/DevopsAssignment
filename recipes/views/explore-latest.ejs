@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cabin&family=Cuprum&family=DynaPuff&family=Fraunces:opsz,wght@9..144,700&family=Indie+Flower&family=Julius+Sans+One&family=Kaushan+Script&family=Lato:wght@300&family=Merriweather+Sans&family=Mochiy+Pop+One&family=Montserrat:wght@500;700&family=PT+Serif&family=Quicksand&family=Roboto:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('common/header'); -%>
+
+    <h1 class="explore">Recipes</h1>
+
+    <section class="recipeflex">
+        <div class="recipewrapper">
+
+        <% if(recipe != '') { %>
+          <% recipe.forEach(function(recipe, index){ %>
+      <a href="/recipe/<%= recipe._id %>" class="cuisine">
+        <img src="/uploads/<%= recipe.image %>" alt="<%= recipe.name %>">
+        <p class="recipepara"><%= recipe.name %></p>
+      </a>
+      <% }) %>
+      <% } else { %>
+        <p>No Recipes</p>
+        <% } %>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+         function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length == 2) return parts.pop().split(";").shift();
+         }
+         const navbar = document.getElementsByClassName("navright")[0];
+         const menu = document.getElementsByClassName("menu")[0];
+         const token = getCookie('token');
+         if (token) {
+             navbar.style.display = "none";
+             menu.style.display = "block";
+         } else {
+             navbar.style.display = "inline-block";
+             menu.style.display = "none";
+         }
+      });
+      </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cabin&family=Cuprum&family=DynaPuff&family=Fraunces:opsz,wght@9..144,700&family=Indie+Flower&family=Julius+Sans+One&family=Kaushan+Script&family=Lato:wght@300&family=Merriweather+Sans&family=Mochiy+Pop+One&family=Montserrat:wght@500;700&family=PT+Serif&family=Quicksand&family=Roboto:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('common/header'); -%>
+
+    <div class="submitcontainer">
+    <div class="submitwrapper">
+        <div class="submitwrapper1">
+        <h1 class="subrec">Submit Recipe</h1>
+
+
+    <div class="submission">
+        <% if(infoSubmitObj != '') { %>
+            <div class="successdiv">
+                <%= infoSubmitObj %>
+            </div>
+                <% } %>
+
+                <div class="submission">
+                    <% if(infoErrorsObj != '') { %>
+                        <div class="dangerdiv">
+                            <%= infoErrorsObj[0].message %>
+                        </div>
+                            <% } %>
+
+
+        <div class="submitform">
+        <form action="/submit-recipe" enctype="multipart/form-data" method="POST">
+
+            <div class="sub-1">
+                <div class="sub-2">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+
+                <div class="sub-2">
+                    <label for="name" class="form-label">Recipe Name</label>
+                    <input type="text" name="name" id="name" class="form-control" required>
+                </div>
+
+                
+                <div class="sub-2">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="description" id="description" class ="desctext" cols="30" rows="4" required></textarea>
+                </div>
+
+
+                
+                <div class="sub-2">
+                    <label for="ingredients" class="form-label">Ingredients</label>
+                    <div class="ingredientList">
+                        <div class="ingredientDiv">
+                    <input type="text" name="ingredients" class="form-control" required>
+                </div>
+                </div>
+                </div>
+
+                <div class="formbutton">
+                    <button type="button" class="btnsubmit" id="addIngredientsBtn">+ Ingredient</button>
+                </div>
+
+                <div class="cate">
+                    <label for="category">Select Category</label>
+                    <select class="form-select form-control" name="category" aria-Label="Category" required>
+                        <option selected>Select Category</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Greek">Greek</option>
+                        <option value="Mexican">Mexican</option>
+                        <option value="Thai">Thai</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="French">French</option>
+                        <option value="Indian">Indian</option>
+                    </select>
+                </div>
+                </div>
+                <div class="submitimages">
+                    <label for="image">Recipe Image</label>
+                    <input type="file" class="subbtn" name="image" accept="image/*" required>
+                </div>
+
+                <div class="picimage">
+                    <button type="submit" class="submitrecipebtn">Submit Recipe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+        </form>
+        
+    </div>
+    <script src="/js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+           function getCookie(name) {
+              var value = "; " + document.cookie;
+              var parts = value.split("; " + name + "=");
+              if (parts.length == 2) return parts.pop().split(";").shift();
+           }
+           const navbar = document.getElementsByClassName("navright")[0];
+           const menu = document.getElementsByClassName("menu")[0];
+           const token = getCookie('token');
+           if (token) {
+               navbar.style.display = "none";
+               menu.style.display = "block";
+           } else {
+               navbar.style.display = "inline-block";
+               menu.style.display = "none";
+           }
+        });
+        </script>
+</body>
+</html>

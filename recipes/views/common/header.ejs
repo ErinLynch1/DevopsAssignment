@@ -1,16 +1,29 @@
 <nav class="navbar">
     <ul class="ul">
+        <div class="navhome">
+            <li><a href="/">Home</a></li></div>
+        
     <div class="navleft">
-        <li><a href="/home">Recipes</a></li>
-        <li><a href="/home">Chefs</a></li>
-        <li><a href="/reviews">Reviews</a></li>
-        <li><a href="/home">Suprise Me</a></li>
+        <li><a href="/explore-latest">Recipes</a></li>
+        <li><a href="/submit-recipe">Add Recipe</a></li>
+        <li><a href="/categories">Cuisines</a></li>
+        <li><a href="/explore-random">Surpise Me</a></li>
+    
         </div>
-
+        <div class="navmid">
+            <form method="POST" action="/search">
+                <input type="search" name="searchTerm" class="form-control" placeholder="Search" aria-label="Search">
+              </form>
+            </div>
         <div class="navright">
         <li><a href="/login">Login</a></li>
-        |
+        
+        <hr>
         <li><a href="register">Register</a></li>
+        </div>
+        <div class="menu" style="display: none; margin-right: 10px; color: #95ccf5; font-weight: bold">
+            <a href="/logout">Logout</a>
+
         </div>
     </ul>
 </nav>

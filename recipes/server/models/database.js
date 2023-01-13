@@ -14,3 +14,6 @@ db.on('error', (err) =>{
 db.once('open', () => {
     console.log('Database connection successful!')
 })
+
+require('./Category');
+require('./Recipe')
