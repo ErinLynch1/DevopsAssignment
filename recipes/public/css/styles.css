@@ -118,6 +118,7 @@ a {
     justify-content: center;
   }
 
+
   .btnsubmit {
     border-radius: 6px;
     padding: 2px;
@@ -211,7 +212,9 @@ a {
 
   .submitwrapper {
     display: flex;
-    height: 92vh;
+    border: 2px solid blue;
+    margin-top: 70px;
+    height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -219,6 +222,7 @@ a {
 
   .submitwrapper1 {
     display: flex;
+    border: 2px solid red;
     flex-direction: column;
     padding: 55px;
     border-radius: 10px;
@@ -236,9 +240,11 @@ a {
   .desctext {
     width: 90%;
     border-radius: 10px;
-    outline: 2px solid black;
   }
 
+  .desctext:hover {
+    outline: 2px solid #95ccf5;
+  }
   
   .submitcontainer {
     display: flex;
@@ -283,8 +289,16 @@ a {
   }
 
   .submitrecipebtn {
+    margin-top: 10px;
     padding: 8px;
     border-radius: 8px;
+    cursor: pointer;
+    background-color: rgb(121, 172, 226);
+    font-weight: bold;
+  }
+
+  .submitrecipebtn:hover {
+
   }
 
 
@@ -298,6 +312,11 @@ a {
     border-radius: 20px;
     margin-right: 20px;
     outline: 1px solid black;
+    border: 0;
+  }
+
+  .form-control:hover {
+    outline: 2px solid #95ccf5;
   }
 
   #register-form {
