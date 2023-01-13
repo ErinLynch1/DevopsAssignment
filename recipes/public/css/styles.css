@@ -212,8 +212,7 @@ a {
 
   .submitwrapper {
     display: flex;
-    border: 2px solid blue;
-    margin-top: 70px;
+    margin-top: 80px;
     height: auto;
     flex-direction: column;
     justify-content: center;
@@ -222,7 +221,6 @@ a {
 
   .submitwrapper1 {
     display: flex;
-    border: 2px solid red;
     flex-direction: column;
     padding: 55px;
     border-radius: 10px;
@@ -303,8 +301,8 @@ a {
 
 
   .loginwrapper {
-    display: flex;
     justify-content: center;
+    width: 100%;
   }
   
   .form-control {
@@ -327,12 +325,13 @@ a {
 
   .logincontainer {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
+      flex-wrap: wrap;
+        height: 92vh;
   }
 
   .loginwrapper {
-    display: flex;
-    height: 84.5vh;
+
   }
 
   .login {
@@ -340,13 +339,18 @@ a {
     border-right: 1px solid #474748;
     justify-content: center;
     flex: 1;
+ 
+  }
+
+  .logincontainers {
+    height: 200px;
+    width: 200px;
   }
   
 
   .notuser {
     display: flex;
-    flex: 1;
-    border: 2px solid green;
+    flex: 0;
   }
 
 
@@ -416,6 +420,7 @@ a {
 
   .registerh2 {
     text-align: center;
+    max-width: 500px;
   }
 
   .recipepara {
@@ -435,12 +440,12 @@ a {
 
   .registernow {
     display: flex;
-    flex: 1;
+    flex: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 220px;
-    width: auto;
+    width: 500px;
   }
 
   /* Reg */
@@ -452,8 +457,9 @@ a {
   .regcontainer {
     display: flex;
     flex-direction: row;
-    height: 90vh;
+    height: auto;
     width: 100vw;
+    margin-top: 50px;
 }
 
 .regform {
@@ -618,10 +624,13 @@ a {
   @media (max-width: 1200px) {
 
 
-    .regcontainer {
-       flex-direction: column;
-       height: auto;
+    .logincontainer {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      height: auto;
     }
+
 
     
   .loginwrapper {
@@ -631,6 +640,7 @@ a {
 
   .recipewrapper {
     width: auto;
+    border: 2px solid red;
   }
 
     .regform {

@@ -10,24 +10,15 @@
 </head>
 <body>
   <%- include('common/header'); -%>
-    <div class="logincontainer">
-        <div class="loginwrapper">
-        <div class="login">
+  <div class="logincontainers"></div>
           <form onsubmit="submitForm(event)" class="loginform" action="/api/login" method="POST">
           <h2 class="loginh2">Log in</h2>
               <a><input class="inputs" type='text' name='username' placeholder='Username / Email'></a></input>
               <a><input class="inputs" type='password' name='password' placeholder='Password'></a></input>
               <input class="loginbtn" type='submit' value='Login'></input>
               </form>
+            </div>
           </div>
-        <div class="notuser">
-        <div class="registernow">
-        <h2 class="registerh2">Not yet a user? Register now</h2>
-        <a href='/register'><input class="registerbtn" type='submit' value='Register'></input></a>
-          </div>
-        </div>
-      </div>
-  </div>
   </div>
 </body>
 </html>
