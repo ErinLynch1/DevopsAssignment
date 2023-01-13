@@ -11,20 +11,19 @@
 <body>
     <%- include('common/header'); -%>
 
-    <h1>SEARCH RESULT</h1>
 
     <section class="recipeflex">
-        <div class="recipewrapper">
-
+        <div class="recipewrappers">
+   
         <% if(recipe != '') { %>
           <% recipe.forEach(function(recipe, index){ %>
       <a href="/recipe/<%= recipe._id %>" class="cuisine">
-        <img src="/uploads/<%= recipe.image %>" alt="<%= recipe.name %>">
+        <img src="/uploads/<%= recipe.image %>" alt="<%= recipe.name %>" class="picsearch">
         <p class="recipepara"><%= recipe.name %></p>
       </a>
       <% }) %>
       <% } else { %>
-        <p>No Recipes</p>
+        <h2 class="searchp">No recipes with that keyword found!</h2>
         <% } %>
     </div>
 </body>

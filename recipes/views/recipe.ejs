@@ -12,7 +12,7 @@
     <%- include('common/header'); -%>
     <% if( recipe != null ) { %>
     
-        <div class="recipename"><h1><%- recipe.name %></h1></div>
+        <div class="recipename"></div>
 
         <div class="reciperow">
             <div class="recipeimg">
@@ -21,17 +21,17 @@
             <div class="recipeinfo">
                 <div class="recipewraps">
                     <div class="recipewraps-1">
-                        <h1><%- recipe.name %></h1>
+                        <h1 class="rcp"><%- recipe.name %></h1>
                     </div>
-                    <div class="icon"><%- recipe.category %></div>
+                   
                     <div class="recipesplit">
-                        <h4>Cooking Instructions</h4>
+                        <h4>Description</h4>
                         <%- recipe.description %>
                     </div>
                 </div>
                 <div class="recipeing">
                     <div class="recipeings">
-                        <h4>Ingredients</h4>
+                        <h4 class="ingredi">Ingredients</h4>
                         <ul class="listing">
                             <% recipe.ingredients.forEach(function(ingredients, index){ %>
                             <li class="lists"><%= ingredients %></li>

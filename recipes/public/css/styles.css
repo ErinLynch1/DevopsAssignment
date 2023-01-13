@@ -21,8 +21,12 @@ html {
 }
 
 .recipename {
-  margin-top: 50px;
+  margin-top: 100px;
   text-align: center;
+}
+
+.rcp {
+  margin-top: 20px;
 }
 
 img{
@@ -39,11 +43,24 @@ img:hover {
   height: 300px;
 }
 
+
 .recipewrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+}
+
+.recipewrappers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 260px;
+}
+
+.picsearch {
+  height: 200px;
 }
 
 .recipewrapper5{
@@ -64,7 +81,11 @@ img:hover {
 }
 
 .recipesplit {
-  white-space: pre-line;
+  margin-top: 20px;
+}
+
+.ingredi {
+  margin-top: 20px;
 }
 
 .successdiv, .dangerdiv {
@@ -206,6 +227,10 @@ a {
     font-family: Helvetica;
   }
 
+  .searchp {
+    margin-top: 300px;
+  }
+
   .successdiv {
     color: green;
   }
@@ -276,7 +301,7 @@ a {
   }
 
   .subrec {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: 'Julius Sans One', sans-serif;
   }
 
@@ -307,6 +332,14 @@ a {
   
   .form-control {
     padding: 10px;
+    border-radius: 20px;
+    margin-right: 20px;
+    outline: 1px solid black;
+    border: 0;
+  }
+
+  .form-control1 {
+    padding: 6px;
     border-radius: 20px;
     margin-right: 20px;
     outline: 1px solid black;
