@@ -69,6 +69,7 @@ img:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  margin-top: 20px;
 }
 
 
@@ -306,8 +307,7 @@ a {
 
   .explore {
     display: flex;
-    margin-top: 60px;
-    margin-bottom: 35px;
+    margin-top: 100px;
     justify-content: center;
     font-family: 'Julius Sans One', sans-serif;
   }
